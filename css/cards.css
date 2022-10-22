@@ -26,6 +26,10 @@
   gap: 1rem;
 }
 
+.card {
+  transition: 0.3s;
+}
+
 .card:hover {
   box-shadow: 4px 4px 50px 4px rgba(205, 205, 205, 0.6);
 }
