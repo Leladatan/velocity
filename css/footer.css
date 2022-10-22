@@ -1,0 +1,16 @@
+.footer {
+  padding: 2rem 0;
+  background-color: #383838;
+}
+
+.footer__content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer_link {
+  color: #9E9E9E;
+}
+
+/*# sourceMappingURL=footer.css.map */

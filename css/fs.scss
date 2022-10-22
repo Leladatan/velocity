@@ -1,0 +1,42 @@
+.first-screen {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.parallax-bg {
+  background-image: url("../img/main/fs/background-fs.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  background-position: center center;
+  width: 115%;
+  height: 115%;
+  transition: all 0.1s ease;
+}
+
+.first-screen__content {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10rem;
+  padding-top: 15rem;
+  padding-left: 10rem;
+}
+
+.first-screen__content_btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+// text
+.first-screen_title {
+  font-size: 60px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #fff;
+}

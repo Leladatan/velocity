@@ -1,0 +1,35 @@
+.header {
+  padding: 1rem;
+}
+
+.header__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__content_list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+}
+
+.header__content_link {
+  color: #676770;
+  background-image: linear-gradient(currentColor, currentColor);
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 2px;
+  transition: background-size 0.2s;
+}
+.header__content_link:hover {
+  color: #0082F3;
+  background-size: 100% 2px;
+}
+
+.header__content_link__active {
+  color: #0082F3;
+}
+
+/*# sourceMappingURL=header.css.map */
