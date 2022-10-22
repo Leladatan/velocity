@@ -26,6 +26,10 @@
   gap: 1rem;
 }
 
+.card:hover {
+  box-shadow: 4px 4px 50px 4px rgba(205, 205, 205, 0.6);
+}
+
 .cards__content {
   gap: 6rem;
 }

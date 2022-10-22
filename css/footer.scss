@@ -10,4 +10,12 @@
 
 .footer_link {
   color: #9E9E9E;
+  background-image: linear-gradient(currentColor, currentColor);
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 2px;
+  transition: background-size .2s;
+  &:hover {
+    background-size: 100% 2px;
+  }
 }
