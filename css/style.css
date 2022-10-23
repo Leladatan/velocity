@@ -105,4 +105,116 @@ table {
   background-color: #4F83B0;
 }
 
+@media screen and (max-width: 1000px) {
+  .container {
+    max-width: 840px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .container {
+    max-width: 740px;
+  }
+}
+@media screen and (max-width: 769px) {
+  .container {
+    max-width: 700px;
+  }
+  .first-screen {
+    background-image: url("../img/main/fs/background-fs.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+  .first-screen__content {
+    position: relative;
+    padding: 15rem 0 0 0;
+  }
+  .parallax-bg {
+    display: none;
+  }
+  .card {
+    max-width: 300px;
+    max-height: 350px;
+  }
+  .cards__content_list {
+    flex-direction: column;
+  }
+  .services__content__cards {
+    flex-direction: column;
+  }
+  .info__content {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+  }
+  .social__title,
+.about__velocity__title,
+.about__velocity__text {
+    text-align: center;
+  }
+  .services__content__cards {
+    gap: 6rem;
+  }
+  .useful__links_link {
+    line-height: 25px;
+  }
+}
+@media screen and (max-width: 726px) {
+  .container {
+    max-width: 660px;
+  }
+  .tab-section__content__slider__text {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 680px) {
+  .container {
+    max-width: 500px;
+  }
+  .first-screen_title {
+    line-height: 80px;
+  }
+}
+@media screen and (max-width: 550px) {
+  .container {
+    max-width: 400px;
+  }
+}
+@media screen and (max-width: 445px) {
+  .container {
+    max-width: 300px;
+  }
+  .header__content_list {
+    gap: 2rem;
+  }
+  .wrap-info__links {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .tab-section__content__slider {
+    gap: 2rem;
+  }
+  .tab-section__content__slider_btns {
+    gap: 0.5rem;
+  }
+  .info {
+    padding: 2rem 0;
+  }
+}
+@media screen and (max-width: 376px) {
+  .container {
+    max-width: 300px;
+  }
+}
+@media screen and (max-width: 321px) {
+  .container {
+    max-width: 290px;
+  }
+  .tab-section__slider_btn {
+    padding: 10px;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */

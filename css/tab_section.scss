@@ -56,6 +56,7 @@
   font-size: 17px;
   letter-spacing: 3px;
   text-transform: uppercase;
+  text-align: center;
 }
 // slider
 .tab-section__content__slider__title {
@@ -67,4 +68,9 @@
 .tab-section__content__slider__text {
   color: #6A859C;
   font-size: 13px;
+}
+.tab-section__slider_img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
 }

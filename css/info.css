@@ -5,7 +5,7 @@
 .info__content {
   display: flex;
   align-items: baseline;
-  justify-content: space-between;
+  justify-content: center;
   gap: 2rem;
 }
 
@@ -17,14 +17,21 @@
   gap: 2rem;
 }
 
+.wrap-info__links,
 .social_list,
 .useful__links_list,
 .social,
 .useful__links {
   display: flex;
   flex-direction: column;
+  align-items: baseline;
   justify-content: center;
   gap: 2rem;
+}
+
+.wrap-info__links {
+  flex-direction: row;
+  gap: 4rem;
 }
 
 .social_list,
