@@ -216,6 +216,18 @@ table {
   .info {
     padding: 2rem 0;
   }
+  .social,
+  .useful__links,
+  .useful__links_list{
+    align-items: center;
+  }
+  .first-screen__content {
+    gap: 7rem;
+  }
+  .first-screen__content_btns {
+    flex-direction: column;
+    gap: 1.3rem;
+  }
 }
 
 @media screen and (max-width: 376px) {
