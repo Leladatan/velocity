@@ -141,7 +141,7 @@ table {
   opacity: 0;
   visibility: hidden;
   transform: translateX(100%);
-  transition: opacity 0.3s ease, visibility 0.2s ease, transform 0.3s ease, z-index 0.2 ease;
+  transition: opacity 0.3s ease, visibility 0.2s ease, transform 0.3s ease, z-index 0.2s ease;
 }
 
 /* when the sidebar has 'show' class */
