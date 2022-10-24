@@ -118,8 +118,9 @@ table {
 
 /*--====== Sidebar ======--*/
 #sidebar {
+  display: none;
   font-family: "Open Sans", sans-serif;
-  position: fixed;
+  position: absolute;
   top: 0;
   right: 0;
   z-index: -999;
@@ -461,6 +462,9 @@ body.dark .header__content_link__active {
   }
   .sidebar_toggler {
     display: flex;
+  }
+  #sidebar {
+    display: block;
   }
 }
 @media screen and (max-width: 376px) {
