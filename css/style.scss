@@ -7,6 +7,8 @@
 @import "info.css";
 @import "footer.css";
 
+*::before,
+*::after,
 * {
   box-sizing: border-box;
   font-family: 'Open Sans', sans-serif;
@@ -112,6 +114,245 @@ table {
   }
 }
 
+#toggleThemeImgBurger,
+#toggleThemeImg {
+  cursor: pointer;
+}
+
+#toggleThemeImgBurger {
+  margin-bottom: 3rem;
+}
+
+// burger-menu
+/*--====== Sidebar ======--*/
+#sidebar {
+  font-family: 'Open Sans', sans-serif;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: -999;
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+  background-color: #fff;
+  overflow-x: hidden;
+  overflow-y: auto;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(100%);
+  transition: opacity 0.3s ease, visibility 0.2s ease, transform 0.3s ease, z-index 0.2 ease;
+}
+
+/* when the sidebar has 'show' class */
+#sidebar.show {
+  pointer-events: all;
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+  z-index: 100;
+}
+
+.sidebar_content {
+  padding: 2.8rem 0;
+  pointer-events: none;
+  /* so that the Sidebar does not get closed while clicking on sidebar_content */
+}
+
+.sidebar_content a {
+  pointer-events: all;
+  /* so that all the <a> inside sidebar_content are clickable */
+}
+
+.sidebar_body {
+  border-top: 1px dashed #333;
+}
+
+.side_navlinks ul {
+  display: grid;
+  gap: 2rem;
+}
+
+.side_navlinks li .burger-menu__active {
+  color: #0082F6;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  opacity: 0.8;
+}
+
+.side_navlinks li .burger-menu {
+  color: #676770;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  opacity: 0.8;
+}
+
+.side_navlinks a:hover {
+  opacity: 1;
+}
+
+/*---- Sidebar-Toggler ----*/
+.sidebar_toggler {
+  position: absolute;
+  right: 15%;
+  width: 1.75rem;
+  height: 1.3rem;
+  display: none; // flex
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  overflow: hidden;
+  z-index: 2000;
+}
+
+.sidebar_toggler span {
+  background-color: #333;
+  width: 100%;
+  height: 2.4px;
+  transition: all 0.3s ease;
+  pointer-events: none;
+  /* so that it doesn't overlap the sidebar_toggler */
+}
+
+/* if the sidebar has 'show' class then their adjacent-sibling (i.e., sidebar_toggler) will... */
+#sidebar.show + .sidebar_toggler {
+  justify-content: center;
+}
+
+#sidebar.show + .sidebar_toggler span {
+  margin-top: -1.2px;
+  margin-bottom: -1.2px;
+}
+
+#sidebar.show + .sidebar_toggler span:first-child {
+  transform: rotate(45deg);
+}
+
+#sidebar.show + .sidebar_toggler span:nth-child(2) {
+  opacity: 0;
+  transform: translateX(-100%);
+}
+
+#sidebar.show + .sidebar_toggler span:last-child {
+  transform: rotate(-45deg);
+}
+
+// Theme-Dark
+body {
+  transition: 0.3s;
+}
+
+body.dark {
+  background-color: #192024;
+}
+
+//burger
+body.dark .sidebar_toggler span {
+  background-color: #fff;
+}
+
+body.dark .side_navlinks li .burger-menu__active {
+  color: #0082F6;
+}
+
+body.dark .side_navlinks li .burger-menu {
+  color: #fff;
+}
+
+body.dark .sidebar_body {
+  border-top: 1px dashed #fff;
+}
+
+body.dark #sidebar {
+  background-color: #192024;
+}
+
+//another
+body.dark .social_link,
+body.dark .useful__links_link {
+  color: #63a4dc;
+}
+
+body.dark .useful__links__title,
+body.dark .social__title,
+body.dark .about__velocity__title,
+body.dark .tab-section__content__slider__title,
+body.dark .tab-section__title,
+body.dark .card__title,
+body.dark .cards__title,
+body.dark .header__content_link {
+  color: #fff;
+}
+
+body.dark .about__velocity__text,
+body.dark .tab-section__content__slider__text,
+body.dark .tab-section__text,
+body.dark .card__text,
+body.dark .cards__text {
+  color: #cdcdcd;
+}
+
+body.dark .header__content_link__active {
+  color: #0082F3;
+}
+
+.moon_img {
+  width: 40px;
+  height: 40px;
+  background-image: url("../img/icons/moon.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.sun_img {
+  width: 40px;
+  height: 40px;
+  background-image: url("../img/icons/sun.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.social_light.twitter::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-image: url(../img/tw.svg);
+  background-repeat: no-repeat;
+}
+
+.social_light.fb::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-image: url(../img/fb.svg);
+  background-repeat: no-repeat;
+}
+
+.social_light.pr::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-image: url(../img/pr.svg);
+  background-repeat: no-repeat;
+}
+
+.social_light.google::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-image: url(../img/go.svg);
+  background-repeat: no-repeat;
+}
+
+.social_light.wf::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-image: url(../img/wf.svg);
+  background-repeat: no-repeat;
+}
+
+
 @media screen and (max-width: 1000px) {
   .container {
     max-width: 840px;
@@ -145,7 +386,7 @@ table {
     max-width: 300px;
     max-height: 350px;
   }
-//  wrap
+  //  wrap
   .cards__content_list {
     flex-direction: column;
   }
@@ -160,7 +401,7 @@ table {
   }
   .social__title,
   .about__velocity__title,
-  .about__velocity__text{
+  .about__velocity__text {
     text-align: center;
   }
   .services__content__cards {
@@ -218,7 +459,7 @@ table {
   }
   .social,
   .useful__links,
-  .useful__links_list{
+  .useful__links_list {
     align-items: center;
   }
   .first-screen__content {
@@ -228,13 +469,29 @@ table {
     flex-direction: column;
     gap: 1.3rem;
   }
+  .header__content_list {
+    gap: 0;
+  }
+  .header__content_list {
+    display: none;
+  }
+  #toggleThemeImg {
+    display: none;
+  }
+  .sidebar_toggler {
+    display: flex;
+  }
 }
 
 @media screen and (max-width: 376px) {
   .container {
     max-width: 300px;
   }
+  .sidebar_toggler {
+    right: 10%;
+  }
 }
+
 @media screen and (max-width: 321px) {
   .container {
     max-width: 290px;
@@ -242,5 +499,8 @@ table {
 
   .tab-section__slider_btn {
     padding: 10px;
+  }
+  .sidebar_toggler {
+    right: 7%;
   }
 }
