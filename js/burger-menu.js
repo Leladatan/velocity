@@ -3,9 +3,13 @@ const sidebarToggler = document.querySelector('.sidebar_toggler');
 
 sidebarToggler.addEventListener('click', (e) => {
     sidebar.classList.toggle('show');
+    sidebar.style.display = 'block';
     document.body.style.overflow = 'hidden';
     sidebarToggler.addEventListener('click', (e) => {
-        if (document.body.style.overflow === 'hidden' && !sidebar.classList.contains('show')) document.body.style.overflow = 'visible';
+        if (document.body.style.overflow === 'hidden' && !sidebar.classList.contains('show')){
+            document.body.style.overflow = 'visible'
+            sidebar.style.display = 'none';
+        }
     })
 });
 
