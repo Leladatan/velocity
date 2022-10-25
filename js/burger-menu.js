@@ -7,7 +7,7 @@ sidebarToggler.addEventListener('click', (e) => {
     document.body.style.overflow = 'hidden';
     sidebarToggler.addEventListener('click', (e) => {
         if (document.body.style.overflow === 'hidden' && !sidebar.classList.contains('show')){
-            document.body.style.overflow = 'visible'
+            document.body.style.overflow = 'visible';
             sidebar.style.display = 'none';
         }
     })
@@ -16,6 +16,6 @@ sidebarToggler.addEventListener('click', (e) => {
 window.addEventListener('click', (e) => {
     if (e.target.id !== 'sidebar' && e.target.className !== 'sidebar_toggler') {
         sidebar.classList.remove('show');
-
+        document.body.style.overflow = 'visible'
     }
 });
