@@ -2,6 +2,7 @@
   padding: 2rem 0;
   background-color: #383838;
 }
+
 .footer__content {
   display: flex;
   align-items: center;
@@ -11,11 +12,12 @@
 .footer_link {
   color: #9E9E9E;
   background-image: linear-gradient(currentColor, currentColor);
-  background-position: 0% 100%;
+  background-position: 0 100%;
   background-repeat: no-repeat;
-  background-size: 0% 2px;
+  background-size: 0 2px;
   transition: background-size .2s;
   text-align: center;
+
   &:hover {
     background-size: 100% 2px;
   }

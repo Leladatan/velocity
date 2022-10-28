@@ -5,6 +5,7 @@
 @import "services.css";
 @import "tab_section.css";
 @import "info.css";
+@import "contact.css";
 @import "footer.css";
 *::before,
 *::after,
@@ -62,6 +63,17 @@ footer, header, hgroup, menu, nav, section {
 
 body {
   line-height: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main {
+  flex-grow: 1;
+}
+
+.footer {
+  flex-shrink: 0;
 }
 
 ol, ul {
@@ -105,6 +117,13 @@ table {
 }
 .btn_default:hover {
   background-color: #4F83B0;
+}
+
+.main__content {
+  display: none;
+}
+.main__content__active {
+  display: block;
 }
 
 #toggleThemeImgBurger,
@@ -239,16 +258,16 @@ body.dark {
   background-color: #192024;
 }
 
+body.dark .side_navlinks li .burger-menu {
+  color: #fff;
+}
+
 body.dark .sidebar_toggler span {
   background-color: #fff;
 }
 
 body.dark .side_navlinks li .burger-menu__active {
   color: #0082F6;
-}
-
-body.dark .side_navlinks li .burger-menu {
-  color: #fff;
 }
 
 body.dark .sidebar_body {
@@ -419,7 +438,7 @@ body.dark .header__content_link__active {
     max-width: 400px;
   }
 }
-@media screen and (max-height: 600px) {
+@media screen and (max-height: 650px) {
   .first-screen__content {
     padding-top: 4rem;
   }
