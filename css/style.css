@@ -419,6 +419,11 @@ body.dark .header__content_link__active {
     max-width: 400px;
   }
 }
+@media screen and (max-height: 600px) {
+  .first-screen__content {
+    padding-top: 4rem;
+  }
+}
 @media screen and (max-width: 445px) {
   .container {
     max-width: 300px;
