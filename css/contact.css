@@ -1,4 +1,8 @@
 .contact {
+  color: #676770;
+}
+
+body.dark .contact {
   color: #fff;
 }
 
