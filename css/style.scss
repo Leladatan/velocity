@@ -129,6 +129,70 @@ table {
   }
 }
 
+//calc
+$maxWidth: 1440;
+
+@mixin adaptive-font($pcSize, $mobSize) {
+  $addSize: $pcSize - $mobSize;
+  $addMobSize: $pcSize  - $mobSize* 0.7;
+  @media (max-width: 767px) {
+    font-size: calc(#{$mobSize + px} + #{$addMobSize} * ((100vw - 320px) / #{$maxWidth}));
+  }
+  @media (max-width: 767px) {
+    font-size: calc(#{$mobSize + px} + #{$addSize} * (100vw / #{$maxWidth}));
+  }
+}
+
+.first-screen h1 {
+  @include adaptive-font(60, 40);
+}
+
+.cards h2 {
+  @include adaptive-font(30, 26);
+}
+
+.cards p {
+  @include adaptive-font(17, 15);
+}
+
+.cards h3 {
+  @include adaptive-font(20, 18);
+}
+
+.services h2 {
+  @include adaptive-font(30, 26);
+}
+
+.services p {
+  @include adaptive-font(17, 15);
+}
+
+.services h3 {
+  @include adaptive-font(20, 18);
+}
+.btn {
+  @include adaptive-font(18, 16);
+}
+
+.tab-section h2 {
+  @include adaptive-font(30, 26);
+}
+
+.tab-section p {
+  @include adaptive-font(17, 15);
+}
+
+.tab-section h3 {
+  @include adaptive-font(30, 26);
+}
+
+.info__content h3 {
+  @include adaptive-font(20, 18);
+}
+
+.info__content p {
+  @include adaptive-font(14, 13);
+}
 //menu swap
 .main__content {
   display: none;
