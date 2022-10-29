@@ -186,15 +186,15 @@ table {
   gap: 2rem;
 }
 
-.side_navlinks li .burger-menu__active {
-  color: #0082F6;
+.side_navlinks li .burger-menu {
+  color: #676770;
   text-transform: uppercase;
   letter-spacing: 1px;
   opacity: 0.8;
 }
 
-.side_navlinks li .burger-menu {
-  color: #676770;
+.side_navlinks li .burger-menu__active {
+  color: #0082F6;
   text-transform: uppercase;
   letter-spacing: 1px;
   opacity: 0.8;
