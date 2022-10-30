@@ -101,6 +101,14 @@ table {
 }
 
 //btn
+button:active, button:focus {
+  outline: none;
+}
+
+button::-moz-focus-inner {
+  border: 0;
+}
+
 .btn {
   color: #fff;
   padding: 12px 32px;
@@ -143,6 +151,20 @@ $maxWidth: 1440;
   }
 }
 
+//contact
+.contact-title {
+  @include adaptive-font(30, 26);
+}
+
+.contact-info-title {
+  @include adaptive-font(20, 18);
+}
+
+.contact-text {
+  @include adaptive-font(17, 15);
+}
+
+//main
 .first-screen h1 {
   @include adaptive-font(60, 40);
 }
@@ -170,6 +192,7 @@ $maxWidth: 1440;
 .services h3 {
   @include adaptive-font(20, 18);
 }
+
 .btn {
   @include adaptive-font(18, 16);
 }
@@ -193,6 +216,7 @@ $maxWidth: 1440;
 .info__content p {
   @include adaptive-font(14, 13);
 }
+
 //menu swap
 .main__content {
   display: none;
@@ -256,7 +280,7 @@ $maxWidth: 1440;
 }
 
 .sidebar_body {
-  border-top: 1px dashed #333;
+  border-top: 1px solid #333;
 }
 
 .side_navlinks ul {
@@ -351,7 +375,7 @@ body.dark .side_navlinks li .burger-menu__active {
 }
 
 body.dark .sidebar_body {
-  border-top: 1px dashed #fff;
+  border-top: 1px solid #fff;
 }
 
 body.dark #sidebar {
@@ -527,7 +551,7 @@ body.dark .header__content_link__active {
   }
 }
 
-@media screen and (max-height: 650px) {
+@media screen and (max-height: 660px) {
   .first-screen__content {
     padding-top: 4rem;
   }
@@ -578,7 +602,9 @@ body.dark .header__content_link__active {
   .sidebar_toggler {
     display: flex;
   }
-
+  .tab-section__content__slider_texts {
+    padding: 0 1rem;
+  }
 }
 
 @media screen and (max-width: 376px) {

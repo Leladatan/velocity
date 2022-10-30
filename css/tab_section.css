@@ -2,6 +2,7 @@
   padding: 80px 0;
 }
 
+.tab-section__slider__content,
 .tab-section__content__slider_texts,
 .tab-section__content__slider,
 .tab-section__content__title,
@@ -13,15 +14,12 @@
   gap: 2rem;
 }
 
-.tab-section__content {
-  gap: 5rem;
-}
-
 .tab-section__content__slider {
   gap: 4rem;
 }
 
 .tab-section__content__slider_texts {
+  padding: 0 2rem;
   gap: 1rem;
 }
 
@@ -77,6 +75,17 @@
   object-fit: cover;
   width: 100%;
   height: 100%;
+}
+
+.tab-section__content__slider_texts p {
+  text-align: center;
+}
+
+.mem-slider {
+  display: none;
+}
+.mem-slider__active {
+  display: flex;
 }
 
 /*# sourceMappingURL=tab_section.css.map */
