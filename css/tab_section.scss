@@ -37,6 +37,7 @@
   background-color: #92A0AD;
   text-transform: uppercase;
   border: 0;
+  transition: .2s;
   border-radius: 10px;
 
   &__active {
@@ -83,9 +84,11 @@
   width: 100%;
   height: 100%;
 }
+
 .tab-section__content__slider_texts p {
   text-align: center;
 }
+
 .mem-slider {
   display: none;
 
