@@ -7,6 +7,9 @@
   align-items: center;
   justify-content: space-between;
 }
+.header__content__logo {
+  z-index: 200;
+}
 
 .header__content_list {
   display: flex;
@@ -30,6 +33,4 @@
 
 .header__content_link__active {
   color: #0082F3;
-}
-
-/*# sourceMappingURL=header.css.map */
+}/*# sourceMappingURL=header.css.map */

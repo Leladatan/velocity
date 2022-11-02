@@ -36,19 +36,87 @@ button {
 }
 
 //reset
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -58,8 +126,17 @@ time, mark, audio, video {
 }
 
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
   display: block;
 }
 
@@ -78,19 +155,20 @@ body {
   flex-shrink: 0;
 }
 
-.wrapper {
-}
-
-ol, ul {
+ol,
+ul {
   list-style: none;
 }
 
-blockquote, q {
+blockquote,
+q {
   quotes: none;
 }
 
-blockquote:before, blockquote:after,
-q:before, q:after {
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
   content: '';
   content: none;
 }
@@ -101,7 +179,8 @@ table {
 }
 
 //btn
-button:active, button:focus {
+button:active,
+button:focus {
   outline: none;
 }
 
@@ -142,10 +221,12 @@ $maxWidth: 1440;
 
 @mixin adaptive-font($pcSize, $mobSize) {
   $addSize: $pcSize - $mobSize;
-  $addMobSize: $pcSize  - $mobSize* 0.7;
+  $addMobSize: $pcSize - $mobSize* 0.7;
+
   @media (max-width: 767px) {
     font-size: calc(#{$mobSize + px} + #{$addMobSize} * ((100vw - 320px) / #{$maxWidth}));
   }
+
   @media (max-width: 767px) {
     font-size: calc(#{$mobSize + px} + #{$addSize} * (100vw / #{$maxWidth}));
   }
@@ -233,7 +314,7 @@ $maxWidth: 1440;
 }
 
 #toggleThemeImgBurger {
-  margin-top: 2rem;
+  margin-top: 4rem;
   margin-bottom: 3rem;
 }
 
@@ -248,7 +329,7 @@ $maxWidth: 1440;
   z-index: -999;
   width: 100%;
   height: 100%;
-  padding: 1rem 3rem 3rem;
+  padding: 1rem 2rem;
   background-color: #fff;
   overflow-x: hidden;
   overflow-y: auto;
@@ -330,25 +411,25 @@ $maxWidth: 1440;
 }
 
 /* if the sidebar has 'show' class then their adjacent-sibling (i.e., sidebar_toggler) will... */
-#sidebar.show + .sidebar_toggler {
+#sidebar.show+.sidebar_toggler {
   justify-content: center;
 }
 
-#sidebar.show + .sidebar_toggler span {
+#sidebar.show+.sidebar_toggler span {
   margin-top: -1.2px;
   margin-bottom: -1.2px;
 }
 
-#sidebar.show + .sidebar_toggler span:first-child {
+#sidebar.show+.sidebar_toggler span:first-child {
   transform: rotate(45deg);
 }
 
-#sidebar.show + .sidebar_toggler span:nth-child(2) {
+#sidebar.show+.sidebar_toggler span:nth-child(2) {
   opacity: 0;
   transform: translateX(-100%);
 }
 
-#sidebar.show + .sidebar_toggler span:last-child {
+#sidebar.show+.sidebar_toggler span:last-child {
   transform: rotate(-45deg);
 }
 
@@ -484,44 +565,54 @@ body.dark .header__content_link__active {
   .container {
     max-width: 700px;
   }
+
   .first-screen {
     background-image: url("../img/main/fs/background-fs.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
   }
+
   .first-screen__content {
     position: relative;
     padding: 15rem 0 0 0;
   }
+
   .parallax-bg {
     display: none;
   }
+
   .card {
     max-width: 300px;
     max-height: 350px;
   }
+
   //  wrap
   .cards__content_list {
     flex-direction: column;
   }
+
   .services__content__cards {
     flex-direction: column;
   }
+
   .info__content {
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 4rem;
   }
+
   .social__title,
   .about__velocity__title,
   .about__velocity__text {
     text-align: center;
   }
+
   .services__content__cards {
     gap: 6rem;
   }
+
   .useful__links_link {
     line-height: 25px;
   }
@@ -531,6 +622,7 @@ body.dark .header__content_link__active {
   .container {
     max-width: 660px;
   }
+
   .tab-section__content__slider__text {
     text-align: center;
   }
@@ -540,6 +632,7 @@ body.dark .header__content_link__active {
   .container {
     max-width: 500px;
   }
+
   .first-screen_title {
     line-height: 80px;
   }
@@ -561,47 +654,60 @@ body.dark .header__content_link__active {
   .container {
     max-width: 300px;
   }
+
   .header__content_list {
     gap: 2rem;
   }
+
   .wrap-info__links {
     flex-direction: column;
     align-items: center;
     justify-content: center;
   }
+
   .tab-section__content__slider {
     gap: 2rem;
   }
+
   .tab-section__content__slider_btns {
     gap: 0.5rem;
   }
+
   .info {
     padding: 2rem 0;
   }
+
   .social,
   .useful__links,
   .useful__links_list {
     align-items: center;
   }
+
   .first-screen__content {
     gap: 7rem;
   }
+
   .first-screen__content_btns {
     flex-direction: column;
     gap: 1.3rem;
   }
+
   .header__content_list {
     gap: 0;
   }
+
   .header__content_list {
     display: none;
   }
+
   #toggleThemeImg {
     display: none;
   }
+
   .sidebar_toggler {
     display: flex;
   }
+
   .tab-section__content__slider_texts {
     padding: 0 1rem;
   }
@@ -611,8 +717,15 @@ body.dark .header__content_link__active {
   .container {
     max-width: 300px;
   }
+
   .sidebar_toggler {
     right: 10%;
+  }
+}
+
+@media screen and (max-width: 351px) {
+  #sidebar {
+    padding: 1rem;
   }
 }
 
@@ -624,6 +737,7 @@ body.dark .header__content_link__active {
   .tab-section__slider_btn {
     padding: 10px;
   }
+
   .sidebar_toggler {
     right: 7%;
   }

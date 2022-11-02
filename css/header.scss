@@ -6,6 +6,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  &__logo {
+    z-index: 200;
+  }
 }
 
 .header__content_list {
